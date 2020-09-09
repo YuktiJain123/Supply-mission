@@ -35,9 +35,11 @@ function setup() {
 	World.add(world, packageBody);
 	
 
-	//Create a Ground
+	ground=createSprite(800,670,800,50);
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
- 	World.add(world, ground);
+	 World.add(world, ground);
+	 
+	 redbox=new RedBox (400,690,100,50);
 
 
 	Engine.run(engine);
