@@ -31,15 +31,15 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:1, isStatic:true});
 	World.add(world, packageBody);
 	
 
-	ground=createSprite(800,670,800,50);
+	
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
 	 World.add(world, ground);
 	 
-	 redbox=new RedBox (400,690,100,50);
+	 //redbox=new RedBox (400,690,100,50);
 
 
 	Engine.run(engine);
@@ -58,7 +58,7 @@ function draw() {
 
 function keyPressed() {
  if (keyCode === DOWN_ARROW) {
-	Matter.Body.setStatic(package,isStatic)
+	Matter.Body.setStatic(packageBody,false)
     
   }
 }
